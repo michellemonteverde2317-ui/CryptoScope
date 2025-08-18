@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=DM+Serif+Text:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Outfit:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+FR+Moderne:wght@100..400&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+}
+a{
+    text-decoration: none;
+    columns: inherit;
+}
+.app{
+    position: relative;
+    min-height: 100vh;
+    color: white;
+    background-image: url('./assets/bg1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;          /* covers full parent height */
+  background: rgba(0,0,0,0.5); /* dim level */
+  z-index: 0;
+}

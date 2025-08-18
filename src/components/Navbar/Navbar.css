@@ -1,0 +1,151 @@
+/* General navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: white;
+  padding: 10px 8%;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 1000;
+}
+
+/* Logo section */
+.navbar-logo{
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-logo h2{
+  color: white !important;
+}
+.navbar-links li{
+  color: white;
+}
+
+.navbar-logo img {
+  width: 40px;
+}
+
+/* Desktop links */
+.navbar-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar-links li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navbar-links li:hover {
+  color: #38bdf8;
+}
+
+/* Desktop right section */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-actions select {
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+.navbar-actions option {
+  background: #1f2937;
+}
+
+.navbar-actions button {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #38bdf8;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navbar-actions button:hover {
+  background: #0ea5e9;
+}
+
+/* Hamburger icon */
+.navbar-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile menu hidden by default */
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background: #111827;
+  width: 100%;
+  padding: 20px;
+  flex-direction: column;
+  gap: 20px;
+  display: none;
+  animation: slideDown 0.3s ease forwards;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.mobile-menu ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-menu select,
+.mobile-menu button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive rules */
+@media (max-width: 900px) {
+  .navbar-links,
+  .navbar-actions {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
